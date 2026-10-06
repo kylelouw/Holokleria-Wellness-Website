@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Contact Holokleria Wellness with questions about products and services.">
+	<title>Contact | Holokleria Wellness</title>
+	<link rel="stylesheet" href="css/global/global.css">
+	<link rel="stylesheet" href="css/contact/contact.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<nav class="navbar">
+			<div class="nav-group nav-left">
+				<a href="index.html" class="logo"><span>Holokleria Wellness</span></a>
+				<div class="navdivider"></div>
+				<ul class="nav-links" id="primary-navigation">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="contact.html" aria-current="page">Contact</a></li>
+				</ul>
+			</div>
+			<div class="nav-group nav-actions-group">
+				<ul class="nav-right">
+					<li><a href="login.html" class="nav-action-link btn-green"><span>Log in</span></a></li>
+					<li><a href="cart.html" class="nav-action-link btn-green"><span>Cart</span></a></li>
+					<li class="nav-menu-toggle-item">
+						<button class="nav-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+							<img class="nav-hamburger" src="images/font-icons/nav/bars-solid-full.svg" alt="">
+						</button>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main class="contact-main">
+		<section class="contact-intro sectionlr">
+			<div class="contact-heading">
+				<div>
+					<span class="contact-eyebrow">Get in touch</span>
+					<h1>We'd love to hear from you.</h1>
+				</div>
+				<p>Questions about a product or service? Send a message or reach us by phone.</p>
+			</div>
+		</section>
+
+		<div class="contact-content sectionlr">
+			<section class="contact-layout" aria-label="Contact Holokleria Wellness">
+				<div class="contact-form-section">
+					<h2>Send a message</h2>
+					<!-- Replace the recipient placeholder with the business email before launch. -->
+					<form class="contact-form" action="mailto:YOUR_EMAIL@example.com" method="post" enctype="text/plain">
+						<label>
+							Full name
+							<input type="text" name="name" autocomplete="name" placeholder="Your name" required>
+						</label>
+						<label>
+							Email address
+							<input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+						</label>
+						<label>
+							<span class="contact-label-text">Phone number <span>(optional)</span></span>
+							<input type="tel" name="phone" autocomplete="tel" placeholder="Your phone number">
+						</label>
+						<label>
+							I'm enquiring about
+							<select name="topic" required>
+								<option value="" selected disabled>Select a topic</option>
+								<option value="products">Products</option>
+								<option value="services">Services</option>
+								<option value="other">Something else</option>
+							</select>
+						</label>
+						<label class="contact-message-field">
+							Message
+							<textarea name="message" rows="6" placeholder="How can we help?" required></textarea>
+						</label>
+						<button class="contact-submit" type="submit">Send message <span aria-hidden="true">&#8594;</span></button>
+					</form>
+				</div>
+
+				<aside class="contact-details">
+					<span class="contact-eyebrow">Contact directly</span>
+					<h2>Prefer a call?</h2>
+					<p>We're happy to help with questions about our wellness services and products.</p>
+					<a class="contact-phone" href="tel:0766209642">076 620 9642</a>
+					<a class="contact-services-link" href="services.html">Explore our services <span aria-hidden="true">&#8594;</span></a>
+				</aside>
+			</section>
+
+			<section class="contact-location">
+				<h2>Visit us</h2>
+				<p>Holokleria Wellness is located in the heart of the city, easily accessible by public transport and with ample parking nearby.</p>
+				<address>
+					123 Wellness Street<br>
+					Cityville, CV 12345<br>
+					<a href="https://www.google.com/maps" target="_blank" rel="noopener noreferrer">View on Google Maps</a>
+				</address>
+			</section>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer-content sectionlr">
+			<div class="footer-brand">
+				<h4>Holokleria Wellness</h4>
+				<p>@gmail.com</p>
+				<p>076 620 9642</p>
+			</div>
+			<div class="footer-links">
+				<h4>Links</h4>
+				<a href="index.html">Home</a>
+				<a href="products.html">Products</a>
+				<a href="services.html">Services</a>
+				<a href="contact.html">Contact</a>
+			</div>
+			<div class="footer-links">
+				<h4>Resources</h4>
+				<a href="faq.html">FAQ</a>
+				<a href="privacy.html">Privacy Policy</a>
+				<a href="terms.html">Terms of Service</a>
+			</div>
+			<div class="footer-social">
+				<h4>Socials</h4>
+				<div class="social-icons">
+					<a href="#" aria-label="Facebook"><img src="images/social/facebook.svg" alt=""></a>
+					<a href="#" aria-label="WhatsApp"><img src="images/social/whatsapp.svg" alt=""></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2026 Holokleria Wellness</p>
+		</div>
+	</footer>
+	<script src="js/main.js"></script>
+</body>
+</html>

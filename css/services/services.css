@@ -1,0 +1,269 @@
+/* Body */
+/* #region */
+main {
+	min-height: 100vh;
+}
+
+/* #endregion */
+
+/* Services Hero */
+/* #region */
+.services-hero {
+	--services-wave-space: clamp(100px, 10vw, 180px);
+	position: relative;
+	overflow: hidden;
+	padding-top: 96px;
+	padding-bottom: var(--services-wave-space);
+	background-image:
+		linear-gradient(110deg, rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.28)),
+		url("../../images/Products/hero/vinayak-veer-U82PlfpYG3M-unsplash.jpg");
+	background-size: cover;
+	background-position: center;
+	color: var(--white);
+	min-height: 70vh;
+}
+
+.services-hero-wave {
+	position: absolute;
+	left: 50%;
+	bottom: -1px;
+	width: 100vw;
+	height: auto;
+	display: block;
+	transform: translateX(-50%);
+	z-index: 2;
+	pointer-events: none;
+}
+
+.services-hero-content {
+	position: relative;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+	gap: clamp(2rem, 7vw, 7rem);
+	align-items: center;
+}
+
+.services-hero h1 {
+	max-width: 620px;
+	margin: 0 0 1rem;
+	font: 700 clamp(2.25rem, 5vw, 4.2rem)/1.08 var(--font-secondary);
+	letter-spacing: -0.05em;
+}
+
+.services-hero p {
+	max-width: 480px;
+	margin: 0 0 1.6rem;
+	color: rgba(255, 255, 255, 0.84);
+	font: 1rem/1.7 var(--font-secondary);
+}
+
+.hero-image-wrap {
+	height: clamp(390px, calc(70vh - 6rem - var(--services-wave-space)), 680px);
+	overflow: hidden;
+	background: #dfe5e4;
+}
+
+.hero-image-wrap img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.primary-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	color: var(--text-primary);
+	font: 600 0.82rem var(--font-secondary);
+}
+
+.services-hero .primary-link {
+	color: var(--white);
+}
+
+.primary-link span,
+.service-card-content a span {
+	transition: transform 0.2s ease;
+}
+
+.primary-link:hover span,
+.service-card-content a:hover span {
+	transform: translateX(4px);
+}
+
+/* #endregion */
+
+/* Services List */
+/* #region */
+.services-list {
+	padding-top: 76px;
+}
+
+.section-heading {
+	display: flex;
+	justify-content: space-between;
+	gap: 2rem;
+	align-items: end;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #dfe3e5;
+	padding-bottom: 20px;
+}
+
+.eyebrow {
+	display: block;
+	margin-bottom: 0.65rem;
+	color: #778187;
+	font: 0.68rem/1 var(--font-secondary);
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.section-heading h2,
+.services-cta h2 {
+	margin: 0;
+	font: 700 clamp(1.7rem, 3vw, 2.5rem) var(--font-secondary);
+	letter-spacing: -0.04em;
+}
+
+.section-heading p {
+	max-width: 380px;
+	margin: 0;
+	color: #778187;
+	font: 0.85rem/1.6 var(--font-secondary);
+}
+
+/* #endregion */
+
+/* Service Cards */
+/* #region */
+.service-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 28px;
+}
+
+.service-card {
+	min-width: 0;
+}
+
+.service-card-image {
+	height: 245px;
+	overflow: hidden;
+	background: #f3f5f5;
+}
+
+.service-card-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.35s ease;
+}
+
+.service-card:hover .service-card-image img {
+	transform: scale(1.04);
+}
+
+.service-card-content {
+	padding: 16px 0 0;
+}
+
+.service-number {
+	color: #8b9499;
+	font: 0.7rem var(--font-secondary);
+}
+
+.service-card h3 {
+	margin: 8px 0 7px;
+	font: 600 1rem var(--font-secondary);
+}
+
+.service-card p {
+	min-height: 66px;
+	margin: 0 0 10px;
+	color: #778187;
+	font: 0.8rem/1.55 var(--font-secondary);
+}
+
+.service-card a {
+	display: inline-flex;
+	gap: 0.55rem;
+	color: var(--text-primary);
+	font: 0.75rem var(--font-secondary);
+}
+
+/* #endregion */
+
+/* Services CTA */
+/* #region */
+.services-cta {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+	margin-top: 80px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-top: 1px solid #dfe3e5;
+	border-bottom: 1px solid #dfe3e5;
+}
+
+/* #endregion */
+
+/* Responsive */
+/* #region */
+@media screen and (max-width: 800px) {
+	.services-hero-content {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.hero-image-wrap {
+		height: 300px;
+	}
+
+	.service-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media screen and (max-width: 560px) {
+	main {
+		padding-top: 72px;
+	}
+
+	.services-hero {
+		padding-top: 28px;
+	}
+
+	.section-heading,
+	.services-cta {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.services-list {
+		padding-top: 48px;
+	}
+
+	.service-grid {
+		grid-template-columns: 1fr;
+		gap: 38px;
+	}
+
+	.service-card-image {
+		height: 220px;
+	}
+
+	.service-card p {
+		min-height: 0;
+	}
+
+	.services-cta {
+		margin-top: 54px;
+	}
+}
+
+/* #endregion */
