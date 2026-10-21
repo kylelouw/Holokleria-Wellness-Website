@@ -1,16 +1,18 @@
 /* Hero */
 /* #region */
-.hero {
+.background-hero {
+    --about-card-height: clamp(9rem, 30vw, 31.25rem);
+    position: relative;
     width: 100%;
-    height: 170vh;
+    min-height: clamp(32rem, 72vh, 56rem);
     background-image:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url("../../images/home/hero/vinayak-veer-U82PlfpYG3M-unsplash.jpg");
     background-size: cover;
-    background-position: center top;
+    background-position: center center;
     background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
+    background-attachment: fixed;
+    overflow: hidden;
 }
 
 /* #endregion */
@@ -18,14 +20,12 @@
 /* Main Body */
 /* #region */
 .mainb {
-    --about-card-height: max(145px, 22.7083vw);
-    --about-card-width: max(101.5px, 15.895vw);
     position: relative;
     width: 100%;
     height: auto;
     background-color: var(--bg-primary);
     border-radius: 1920px 1920px 0 0;
-    margin-top: -110vh;
+    overflow: hidden;
 }
 
 
@@ -33,27 +33,36 @@
 
 /* About Section */
 /* #region */
+.aboutcards {
+    width: 100%;
+    height: 80%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    z-index: 2;
+    transform: translateY(40%);
+}
+
 .aboutcf {
     width: auto;
     height: var(--about-card-height);
-    position: absolute;
-    top: -5%;
-    left: calc(44% - var(--about-card-width) / 2);
     rotate: -15deg;
     object-fit: cover;
+    z-index: 3;
 }
 
 .aboutcb {
     width: auto;
     height: var(--about-card-height);
-    position: absolute;
-    top: -5%;
-    right: calc(40% - var(--about-card-width) / 2);
     rotate: 15deg;
     object-fit: cover;
+    z-index: 2;
+    transform: translateY(80px);
 }
 
 .aboutcf img, .aboutcb img {
+    display: block;
     width: auto;
     height: 100%;
     object-fit: cover;
@@ -62,28 +71,34 @@
 .about {
     width: 100%;
     text-align: center;
-    padding-top: calc(var(--about-card-height) + 53px);
+    padding-top: calc(var(--about-card-height) - 60px);
     padding-bottom: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.about h2,
+.about > .slide-in {
+    width: 100%;
+}
+
+.about h1,
 .about p {
     width: min(30%, 600px);
     margin-left: auto;
     margin-right: auto;
 }
 
-.about h2 {
+.about h1 {
     width: min(40%, 650px);
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-family: var(--font-primary);
+    font-size: clamp(1.7rem, 3.2vw, 2.7rem);
+    font-weight: 600;
 }
 
 .about p {
     width: min(30%, 600px);
-    font-size: clamp(0.9rem, 1.15vw, 1.05rem);
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
     line-height: 1.75;
 }
 
@@ -122,7 +137,7 @@
 
 .service-card-content h3 {
     margin: 0;
-    font: 600 clamp(1.25rem, 2.4vw, 2rem)/1.2 var(--font-secondary);
+    font: 600 clamp(1.25rem, 2.4vw, 2rem)/1.2 var(--font-primary);
 }
 
 .service-card-content p {
@@ -205,36 +220,9 @@
     padding-right: clamp(1rem, 5vw, 10rem);
 }
 
-.home-section-heading {
+.section-heading {
     width: 100%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 2rem;
-    border-bottom: 1px solid #dfe3e5;
-    padding-bottom: 20px;
-}
-
-.home-eyebrow {
-    display: block;
-    margin-bottom: 0.65rem;
-    color: #778187;
-    font: 0.68rem/1 var(--font-secondary);
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-}
-
-.home-section-heading h2 {
-    margin: 0;
-    font: 700 clamp(1.7rem, 3vw, 2.5rem) var(--font-secondary);
-    letter-spacing: -0.04em;
-}
-
-.home-section-heading p {
-    max-width: 380px;
-    margin: 0;
-    color: #778187;
-    font: 0.85rem/1.6 var(--font-secondary);
+    margin-bottom: 0;
 }
 
 .product-grid {
@@ -243,115 +231,6 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(220px, 1fr));
     gap: 2rem;
-}
-
-.product-card {
-    min-width: 0;
-}
-
-.product-card-image {
-    height: 190px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: #f3f5f5;
-}
-
-.product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.35s ease;
-}
-
-.product-card:hover .product-image {
-    transform: scale(1.04);
-}
-
-.product-info {
-    padding-top: 12px;
-}
-
-.product-tag {
-    display: inline-block;
-    margin-bottom: 6px;
-    padding: 3px 8px;
-    border-radius: 999px;
-    background: #1c2a38;
-    color: #fff;
-    font: 0.63rem var(--font-secondary);
-}
-
-.product-info h3 {
-    margin: 0 0 5px;
-    font: 600 0.95rem var(--font-secondary);
-}
-
-.product-info p {
-    min-height: 38px;
-    margin: 0 0 5px;
-    color: #778187;
-    font: 0.76rem/1.45 var(--font-secondary);
-}
-
-.product-price {
-    margin: 0 0 8px;
-    color: var(--text-primary);
-    font: 600 0.9rem var(--font-secondary);
-}
-
-.product-card-actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px solid #e2e5e6;
-}
-
-.add-to-cart {
-    min-height: 34px;
-    padding: 0.45rem 0.65rem;
-    border: 1px solid var(--primary-color);
-    border-radius: var(--radius-sm);
-    background: transparent;
-    color: var(--text-primary);
-    font: 600 0.7rem var(--font-secondary);
-    white-space: nowrap;
-    cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.add-to-cart:hover {
-    background: var(--primary-color);
-    color: var(--white);
-}
-
-.add-to-cart:focus-visible {
-    outline: 2px solid var(--accent-yellow);
-    outline-offset: 2px;
-}
-
-.product-link {
-    color: var(--text-primary);
-    font: 0.75rem var(--font-secondary);
-}
-
-.product-link span {
-    display: inline-block;
-    transition: transform 0.2s ease;
-}
-
-.product-link:hover span {
-    transform: translateX(4px);
-}
-
-.product-name-row p {
-    margin: 0;
-    font-size: 0.95rem;
 }
 
 .product-hero {
@@ -385,7 +264,7 @@
 
 .product-hero-eyebrow {
     color: rgba(255, 255, 255, 0.78);
-    font: 600 0.68rem/1 var(--font-secondary);
+    font: 600 0.68rem/1 var(--font-primary);
     letter-spacing: 0.14em;
     text-transform: uppercase;
 }
@@ -393,7 +272,7 @@
 .product-hero h3 {
     margin: 0;
     color: var(--white);
-    font: 700 clamp(1.8rem, 4vw, 3rem)/1.12 var(--font-secondary);
+    font: 700 clamp(1.8rem, 4vw, 3rem)/1.12 var(--font-primary);
     letter-spacing: -0.04em;
 }
 
@@ -476,7 +355,7 @@
         padding-top: calc(var(--about-card-height) + 70px);
     }
 
-    .about h2 {
+    .about h1 {
         width: min(70%, 650px);
     }
 
@@ -529,7 +408,7 @@
         padding: calc(var(--about-card-height) + 65px) 1.25rem 2.5rem;
     }
 
-    .about h2,
+    .about h1,
     .about p {
         width: min(100%, 38rem);
     }
@@ -551,10 +430,6 @@
     display: flex;
     flex-direction: column;
     gap: clamp(1.5rem, 3vw, 2.5rem);
-}
-
-.testimonial-title {
-    margin: 0;
 }
 
 .testimonial-card {
@@ -618,7 +493,6 @@
     font-size: 4.5rem;
     line-height: 1;
     color: var(--white);
-    font-family: "Libre Baskerville", serif;
 }
 
 .testimonial-quote {
@@ -678,7 +552,7 @@
 }
 
 @media (max-width: 700px) {
-    .home-section-heading {
+    .section-heading {
         align-items: flex-start;
         flex-direction: column;
         gap: 14px;

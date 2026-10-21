@@ -19,6 +19,7 @@ main {
 		url("../../images/Products/hero/vinayak-veer-U82PlfpYG3M-unsplash.jpg");
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
 	color: var(--white);
 	min-height: 70vh;
 }
@@ -31,7 +32,7 @@ main {
 	height: auto;
 	display: block;
 	transform: translateX(-50%);
-	z-index: 2;
+	z-index: 0;
 	pointer-events: none;
 }
 
@@ -47,7 +48,7 @@ main {
 .services-hero h1 {
 	max-width: 620px;
 	margin: 0 0 1rem;
-	font: 700 clamp(2.25rem, 5vw, 4.2rem)/1.08 var(--font-secondary);
+	font: 700 clamp(2.25rem, 5vw, 4.2rem)/1.08 var(--font-primary);
 	letter-spacing: -0.05em;
 }
 
@@ -101,39 +102,6 @@ main {
 	padding-top: 76px;
 }
 
-.section-heading {
-	display: flex;
-	justify-content: space-between;
-	gap: 2rem;
-	align-items: end;
-	margin-bottom: 30px;
-	border-bottom: 1px solid #dfe3e5;
-	padding-bottom: 20px;
-}
-
-.eyebrow {
-	display: block;
-	margin-bottom: 0.65rem;
-	color: #778187;
-	font: 0.68rem/1 var(--font-secondary);
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-}
-
-.section-heading h2,
-.services-cta h2 {
-	margin: 0;
-	font: 700 clamp(1.7rem, 3vw, 2.5rem) var(--font-secondary);
-	letter-spacing: -0.04em;
-}
-
-.section-heading p {
-	max-width: 380px;
-	margin: 0;
-	color: #778187;
-	font: 0.85rem/1.6 var(--font-secondary);
-}
-
 /* #endregion */
 
 /* Service Cards */
@@ -177,7 +145,7 @@ main {
 
 .service-card h3 {
 	margin: 8px 0 7px;
-	font: 600 1rem var(--font-secondary);
+	font: 600 1rem var(--font-primary);
 }
 
 .service-card p {

@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Website description here">
-    <meta name="keywords" content="website, keywords">
-    <meta name="author" content="Your Name">
-    <title>Holokleria Wellness</title>
+    <meta name="description" content="Explore wellness and self-care products from Holokleria Wellness in Klein Brak River, Mossel Bay. Contact us to confirm availability and pricing.">
+    <title>Wellness Products | Holokleria Wellness</title>
 
     <link rel="stylesheet" href="css/global/global.css">
+    <link rel="stylesheet" href="css/products/product-cards.css">
     <link rel="stylesheet" href="css/products/products.css">
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="icon" href="/images/favicon/favicon.ico">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <meta name="theme-color" content="#2B2B2B">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <nav class="navbar">
             <div class="nav-group nav-left">
-                <a href="#" class="logo">
+                <a href="index.html" class="logo">
                     <span>Holokleria Wellness</span>
                 </a>
                 <div class="navdivider"></div>
@@ -33,18 +37,9 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
             <div class="nav-group nav-actions-group">
-                <ul class="nav-right">
-                    <li>
-                        <a href="login.html" class="nav-action-link btn-green" aria-label="Log in">
-                            <svg class="nav-icon" viewBox="0 0 640 640" aria-hidden="true">
-                                <path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z" fill="currentColor"/>
-                            </svg>
-                            <span>Log in</span>
-                        </a>
-                    </li>
-                    <li>
+                    <ul class="nav-right">
+                    <li><a href="login.html" class="nav-action-link btn-green" aria-label="Sign in"><svg class="nav-icon" viewBox="0 0 640 640" aria-hidden="true"><path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z" fill="currentColor"/></svg><span>Sign in</span></a></li><li>
                         <a href="cart.html" class="nav-action-link btn-green" aria-label="Cart">
                             <svg class="nav-icon" viewBox="0 0 640 640" aria-hidden="true">
                                 <path d="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z" fill="currentColor"/>
@@ -54,10 +49,12 @@
                     </li>
                     <li class="nav-menu-toggle-item">
                         <button class="nav-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
-                            <img class="nav-hamburger" src="images/font-icons/nav/bars-solid-full.svg" alt="">
+                            <svg class="nav-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                <path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" fill="currentColor"/>
+                            </svg>
                         </button>
                     </li>
-                </ul>
+                    </ul>
             </div>
         </nav>
     </header>
@@ -67,20 +64,20 @@
             <h1>Browse Our Products</h1>
             <p>Discover wellness products to complement your self-care routine.</p>
             <a class="primary-link" href="#catalog">Explore products <span aria-hidden="true">&#8594;</span></a>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#F8F8F8" fill-opacity="1" d="M0,320L120,293.3C240,267,480,213,720,213.3C960,213,1200,267,1320,293.3L1440,320L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+            <svg class="catalog-hero-wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" aria-hidden="true"><path fill="#F8F8F8" fill-opacity="1" d="M0,320L120,293.3C240,267,480,213,720,213.3C960,213,1200,267,1320,293.3L1440,320L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
         </section>
 
         <section class="catalog sectionlr" id="catalog">
-            <div class="catalog-heading">
+            <div class="section-heading slide-in">
                 <div>
-                    <span class="catalog-eyebrow">Our collection</span>
-                    <h2>All Our Products</h2>
+                    <span class="section-eyebrow">Our collection</span>
+                    <h2 class="section-title">Shop Wellness Essentials</h2>
                 </div>
                 <p>Thoughtfully chosen essentials for your wellness, skincare, and self-care rituals.</p>
             </div>
 
             <div class="catalog-layout">
-                <aside class="catalog-filters" aria-label="Filter products">
+                <aside class="catalog-filters slide-in" aria-label="Filter products">
                     <div class="catalog-search" role="search">
                         <img class="catalog-search-icon" src="images/font-icons/Products/magnifying-glass-solid-full.svg" alt="">
                         <input id="product-search" type="search" placeholder="Search products" aria-label="Search products" autocomplete="off">
@@ -102,28 +99,28 @@
                 </aside>
 
                 <!-- Placeholder ZAR prices; replace with final prices before launch. -->
-                <div class="product-grid">
-                    <article class="product-card">
+                <div class="product-grid slide-in">
+                    <article class="product-card slide-in">
                         <div class="product-card-image"><img src="images/Products/products/mockup-free-_DX721wJ5_o-unsplash.jpg" alt="Botanical wellness oil" class="product-image"></div>
                         <div class="product-info"><span class="product-tag">Wellness</span><h3>Botanical Body Oil</h3><p>A nourishing daily ritual made with calming natural oils.</p><p class="product-price">R 249.00</p><div class="product-card-actions"><a href="#" class="product-link">View product <span aria-hidden="true">&#8594;</span></a><button class="add-to-cart" type="button" aria-label="Add Botanical Body Oil to cart">Add to cart</button></div></div>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card slide-in">
                         <div class="product-card-image"><img src="images/Products/products/mockup-free-TubVvARwFms-unsplash.jpg" alt="Natural skincare product" class="product-image"></div>
                         <div class="product-info"><span class="product-tag">Skincare</span><h3>Daily Skin Essential</h3><p>Simple, restorative care for a softer, healthier glow.</p><p class="product-price">R 199.00</p><div class="product-card-actions"><a href="#" class="product-link">View product <span aria-hidden="true">&#8594;</span></a><button class="add-to-cart" type="button" aria-label="Add Daily Skin Essential to cart">Add to cart</button></div></div>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card slide-in">
                         <div class="product-card-image"><img src="images/Products/products/mockup-free-Km2kpMfp804-unsplash.jpg" alt="Self care product" class="product-image"></div>
                         <div class="product-info"><span class="product-tag">Body Care</span><h3>Everyday Body Care</h3><p>Thoughtful essentials to turn everyday care into a pause.</p><p class="product-price">R 159.00</p><div class="product-card-actions"><a href="#" class="product-link">View product <span aria-hidden="true">&#8594;</span></a><button class="add-to-cart" type="button" aria-label="Add Everyday Body Care to cart">Add to cart</button></div></div>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card slide-in">
                         <div class="product-card-image"><img src="images/Products/products/mockup-free-1qT5k49jJmc-unsplash.jpg" alt="Wellness product set" class="product-image"></div>
                         <div class="product-info"><span class="product-tag">Bundles</span><h3>Wellness Starter Set</h3><p>A considered collection for building a slower daily routine.</p><p class="product-price">R 649.00</p><div class="product-card-actions"><a href="#" class="product-link">View product <span aria-hidden="true">&#8594;</span></a><button class="add-to-cart" type="button" aria-label="Add Wellness Starter Set to cart">Add to cart</button></div></div>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card slide-in">
                         <div class="product-card-image"><img src="images/Home/Products/mockup-free-1qT5k49jJmc-unsplash.jpg" alt="Relaxing wellness product" class="product-image"></div>
                         <div class="product-info"><span class="product-tag">Wellness</span><h3>Quiet Evening Ritual</h3><p>Gentle, grounding pieces for winding down at home.</p><p class="product-price">R 429.00</p><div class="product-card-actions"><a href="#" class="product-link">View product <span aria-hidden="true">&#8594;</span></a><button class="add-to-cart" type="button" aria-label="Add Quiet Evening Ritual to cart">Add to cart</button></div></div>
                     </article>
-                    <article class="product-card">
+                    <article class="product-card slide-in">
                         <div class="product-card-image"><img src="images/Products/products/mockup-free-TubVvARwFms-unsplash.jpg" alt="Natural care gift set" class="product-image"></div>
                         <div class="product-info"><span class="product-tag">Gift Sets</span><h3>Care For Someone</h3><p>A warm selection of small comforts, ready to give.</p><p class="product-price">R 349.00</p><div class="product-card-actions"><a href="#" class="product-link">View product <span aria-hidden="true">&#8594;</span></a><button class="add-to-cart" type="button" aria-label="Add Care For Someone to cart">Add to cart</button></div></div>
                     </article>
@@ -139,8 +136,8 @@
             <!-- Brand / Contact -->
             <div class="footer-brand">
                 <h4>Holokleria Wellness</h4>
-                <p>@gmail.com</p>
-                <p>076 620 9642</p>
+                <p><a href="mailto:Holokleriawellness74@gmail.com">Holokleriawellness74@gmail.com</a></p>
+                <p><a href="tel:+27766209642">076 620 9642</a></p>
             </div>
 
             <!-- Links -->
@@ -160,25 +157,17 @@
                 <a href="terms.html">Terms of Service</a>
             </div>
 
-            <!-- Socials -->
             <div class="footer-social">
                 <h4>Socials</h4>
-
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook">
-                        <img src="images/social/facebook.svg" alt="">
-                    </a>
-
-                    <a href="#" aria-label="WhatsApp">
-                        <img src="images/social/whatsapp.svg" alt="">
-                    </a>
+                <div class="social-icons" aria-label="Social media links">
+                    <a class="social-icon" href="#" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"/></svg></a>
+                    <a class="social-icon" href="https://wa.me/27766209642" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><path d="M92.1 254.6c0 24.9 7 49.2 20.2 70.1l3.1 5-13.3 48.6 49.9-13.1 4.8 2.9c20.2 12 43.4 18.4 67.1 18.4l.1 0c72.6 0 133.3-59.1 133.3-131.8 0-35.2-15.2-68.3-40.1-93.2-25-25-58-38.7-93.2-38.7-72.7 0-131.8 59.1-131.9 131.8zM274.8 330c-12.6 1.9-22.4 .9-47.5-9.9-36.8-15.9-61.8-51.5-66.9-58.7-.4-.6-.7-.9-.8-1.1-2-2.6-16.2-21.5-16.2-41 0-18.4 9-27.9 13.2-32.3 .3-.3 .5-.5 .7-.8 3.6-4 7.9-5 10.6-5 2.6 0 5.3 0 7.6 .1l.8 0c2.3 0 5.2 0 8.1 6.8 1.2 2.9 3 7.3 4.9 11.8 3.3 8 6.7 16.3 7.3 17.6 1 2 1.7 4.3 .3 6.9-3.4 6.8-6.9 10.4-9.3 13-3.1 3.2-4.5 4.7-2.3 8.6 15.3 26.3 30.6 35.4 53.9 47.1 4 2 6.3 1.7 8.6-1 2.3-2.6 9.9-11.6 12.5-15.5 2.6-4 5.3-3.3 8.9-2s23.1 10.9 27.1 12.9c.8 .4 1.5 .7 2.1 1 2.8 1.4 4.7 2.3 5.5 3.6 .9 1.9 .9 9.9-2.4 19.1-3.3 9.3-19.1 17.7-26.7 18.8zM448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"/></svg></a>
                 </div>
             </div>
-
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2026 Holokleria Wellness</p>
+            <p>&copy; <span data-current-year>2026</span> Holokleria Wellness</p>
         </div>
 
     </footer>

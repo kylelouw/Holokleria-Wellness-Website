@@ -25,9 +25,49 @@ const nameEl = document.getElementById('testimonial-name');
 const imageEl = document.querySelector('.testimonial-card-image');
 const indicators = Array.from(document.querySelectorAll('.testimonial-indicator'));
 
+document.querySelectorAll('[data-current-year]').forEach((element) => {
+    element.textContent = new Date().getFullYear();
+});
+
 const productSearch = document.getElementById('product-search');
 const productCards = Array.from(document.querySelectorAll('.product-card'));
 const emptyCatalogMessage = document.getElementById('catalog-empty');
+
+const slideInElements = document.querySelectorAll('.slide-in');
+
+if (slideInElements.length) {
+    document.documentElement.classList.add('js-enabled');
+
+    if ('IntersectionObserver' in window) {
+        const slideInObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.15 });
+
+        slideInElements.forEach((element) => slideInObserver.observe(element));
+    } else {
+        slideInElements.forEach((element) => element.classList.add('is-visible'));
+    }
+}
+
+const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+document.querySelectorAll('.nav-links a').forEach((link) => {
+    const linkPage = new URL(link.href, window.location.href).pathname.split('/').pop();
+    const isCurrentPage = linkPage === currentPage;
+
+    link.classList.toggle('active', isCurrentPage);
+
+    if (isCurrentPage) {
+        link.setAttribute('aria-current', 'page');
+    } else {
+        link.removeAttribute('aria-current');
+    }
+});
 
 document.querySelectorAll('.navbar').forEach((navbar) => {
     const toggle = navbar.querySelector('.nav-menu-toggle');

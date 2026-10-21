@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="The page you’re looking for couldn’t be found. Return to the Holokleria Wellness home page or contact us for help.">
+	<meta name="robots" content="noindex, follow">
+	<title>Page Not Found | Holokleria Wellness</title>
+	<link rel="stylesheet" href="/css/global/global.css">
+    <link rel="stylesheet" href="/css/404/404.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+	<link rel="icon" href="/images/favicon/favicon.ico">
+	<link rel="manifest" href="/images/favicon/site.webmanifest">
+	<meta name="theme-color" content="#2B2B2B">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+        <nav class="navbar">
+            <div class="nav-group nav-left">
+                <a href="/" class="logo">
+                    <span>Holokleria Wellness</span>
+                </a>
+                <div class="navdivider"></div>
+                <ul class="nav-links" id="primary-navigation">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products.html">Products</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-group nav-actions-group">
+                    <ul class="nav-right">
+                    <li><a href="/login.html" class="nav-action-link btn-green" aria-label="Sign in"><svg class="nav-icon" viewBox="0 0 640 640" aria-hidden="true"><path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z" fill="currentColor"/></svg><span>Sign in</span></a></li><li>
+                        <a href="/cart.html" class="nav-action-link btn-green" aria-label="Cart">
+                            <svg class="nav-icon" viewBox="0 0 640 640" aria-hidden="true">
+                                <path d="M24 48C10.7 48 0 58.7 0 72C0 85.3 10.7 96 24 96L69.3 96C73.2 96 76.5 98.8 77.2 102.6L129.3 388.9C135.5 423.1 165.3 448 200.1 448L456 448C469.3 448 480 437.3 480 424C480 410.7 469.3 400 456 400L200.1 400C188.5 400 178.6 391.7 176.5 380.3L171.4 352L475 352C505.8 352 532.2 330.1 537.9 299.8L568.9 133.9C572.6 114.2 557.5 96 537.4 96L124.7 96L124.3 94C119.5 67.4 96.3 48 69.2 48L24 48zM208 576C234.5 576 256 554.5 256 528C256 501.5 234.5 480 208 480C181.5 480 160 501.5 160 528C160 554.5 181.5 576 208 576zM432 576C458.5 576 480 554.5 480 528C480 501.5 458.5 480 432 480C405.5 480 384 501.5 384 528C384 554.5 405.5 576 432 576z" fill="currentColor"/>
+                            </svg>
+                            <span>Cart</span>
+                        </a>
+                    </li>
+                    <li class="nav-menu-toggle-item">
+                        <button class="nav-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+                            <svg class="nav-hamburger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                <path d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </li>
+                    </ul>
+            </div>
+        </nav>
+    </header>
+
+	<main>
+        <div class="hero">
+                <img src="/images/decoration_elements/deco_plant_a.png" alt="" class="deco-plant-a">
+                <img src="/images/decoration_elements/deco_plant_a.png" alt="" class="deco-plant-b">
+            <div class="hero-content sectionlr sectiontb slide-in">
+                <h1>404</h1>
+                <p>Sorry, we couldn’t find that page. You can return home or contact us for help.</p>
+                <div class="button-container">
+                    <a class="hero-button home-button" href="/">Return Home</a>
+                    <a class="hero-button contact-button" href="/contact.html">Contact Us</a>
+                </div>
+            </div>
+        </div>
+	</main>
+	<script src="/js/main.js"></script>
+</body>
+</html>
