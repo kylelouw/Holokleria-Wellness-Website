@@ -12,6 +12,12 @@
     background: #f3f5f5;
 }
 
+.product-picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .product-image {
     width: 100%;
     height: 100%;
