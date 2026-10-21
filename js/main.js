@@ -31,6 +31,7 @@ document.querySelectorAll('[data-current-year]').forEach((element) => {
 
 const productSearch = document.getElementById('product-search');
 const productCards = Array.from(document.querySelectorAll('.product-card'));
+const productCategories = Array.from(document.querySelectorAll('input[name="category"]'));
 const emptyCatalogMessage = document.getElementById('catalog-empty');
 
 const slideInElements = document.querySelectorAll('.slide-in');
@@ -103,22 +104,35 @@ document.querySelectorAll('.navbar').forEach((navbar) => {
     window.matchMedia('(min-width: 901px)').addEventListener('change', () => setMenuOpen(false));
 });
 
-if (productSearch && productCards.length) {
-    productSearch.addEventListener('input', () => {
-        const query = productSearch.value.trim().toLocaleLowerCase();
+if (productCards.length) {
+    const updateProductFilters = () => {
+        const query = productSearch?.value.trim().toLocaleLowerCase() ?? '';
+        const selectedCategories = productCategories
+            .filter((category) => category.checked)
+            .map((category) => category.value);
         let visibleCount = 0;
 
         productCards.forEach((card) => {
-            const matches = card.textContent.toLocaleLowerCase().includes(query);
-            card.hidden = !matches;
+            const matchesSearch = card.textContent.toLocaleLowerCase().includes(query);
+            const matchesCategory = selectedCategories.length === 0
+                || selectedCategories.includes(card.dataset.category);
+            const isVisible = matchesSearch && matchesCategory;
 
-            if (matches) visibleCount += 1;
+            card.hidden = !isVisible;
+
+            if (isVisible) visibleCount += 1;
         });
 
         if (emptyCatalogMessage) {
             emptyCatalogMessage.hidden = visibleCount !== 0;
         }
+    };
+
+    productSearch?.addEventListener('input', updateProductFilters);
+    productCategories.forEach((category) => {
+        category.addEventListener('change', updateProductFilters);
     });
+    updateProductFilters();
 }
 
 let activeIndex = 0;
